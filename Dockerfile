@@ -5,12 +5,12 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -y \
  && apt-get install -qq -y git \
- && apt-get install -qq -y python-dev python-pip python-pillow \
+ && apt-get install -qq -y python3 python3-dev python3-pip python3-pillow \
  && apt-get install -qq -y texinfo texlive-base texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-latex-recommended \
  && apt-get clean \
  && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
-RUN pip install pybtex sphinx sphinx_rtd_theme sphinxcontrib-blockdiag sphinxcontrib-programoutput
+RUN pip3 install pybtex sphinx sphinx_rtd_theme sphinxcontrib-blockdiag sphinxcontrib-programoutput
 
 RUN git clone https://github.com/google/fonts.git /opt/googlefonts \
  && mkdir -p /usr/share/fonts/truetype/google-fonts/ \
