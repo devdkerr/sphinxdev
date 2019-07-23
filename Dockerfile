@@ -10,7 +10,7 @@ RUN apt-get update -y \
  && apt-get clean \
  && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
-RUN pip3 install pybtex sphinx sphinx_rtd_theme sphinxcontrib-blockdiag sphinxcontrib-programoutput
+RUN pip3 install pybtex sphinx sphinx_rtd_theme sphinxcontrib-blockdiag sphinxcontrib-programoutput typing
 
 RUN git clone https://github.com/google/fonts.git /opt/googlefonts \
  && mkdir -p /usr/share/fonts/truetype/google-fonts/ \
